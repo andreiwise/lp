@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Бизнес в кармане — Андрей | Happy People Network</title>
-<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  /* System font stack - no external requests, instant load */
 <style>
   :root {
     --gold: #C9A84C;
@@ -23,7 +23,7 @@
   html { scroll-behavior: smooth; }
 
   body {
-    font-family: 'Manrope', sans-serif;
+    font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Display', 'Segoe UI', system-ui, sans-serif;
     background: var(--dark);
     color: var(--text);
     overflow-x: hidden;
@@ -35,7 +35,7 @@
     position: relative;
     display: flex;
     align-items: center;
-    overflow: hidden;
+    overflow-x: hidden;
     background: linear-gradient(135deg, #0D1117 0%, #141B25 50%, #0D1117 100%);
   }
 
@@ -102,7 +102,7 @@
   }
 
   .hero-title {
-    font-family: 'Manrope', sans-serif;
+    font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Display', 'Segoe UI', system-ui, sans-serif;
     font-size: clamp(28px, 4.5vw, 52px);
     font-weight: 900;
     line-height: 1.1;
@@ -138,10 +138,7 @@
     gap: 12px;
     background: linear-gradient(135deg, var(--gold), #A87830);
     color: var(--dark);
-    font-family: 'Manrope', sans-serif;
-    font-size: 15px;
-    font-weight: 800;
-    padding: 18px 40px;
+    font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Display', 'Segoe UI', system-ui, sans-serif;
     border-radius: 50px;
     text-decoration: none;
     white-space: nowrap;
@@ -277,7 +274,7 @@
   .stat-item {}
 
   .stat-num {
-    font-family: 'Manrope', sans-serif;
+    font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Display', 'Segoe UI', system-ui, sans-serif;
     font-size: 32px;
     font-weight: 900;
     background: linear-gradient(135deg, var(--gold), var(--gold-light));
@@ -312,7 +309,7 @@
   }
 
   .section-title {
-    font-family: 'Manrope', sans-serif;
+    font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Display', 'Segoe UI', system-ui, sans-serif;
     font-size: clamp(24px, 3.5vw, 40px);
     font-weight: 900;
     line-height: 1.15;
@@ -620,29 +617,40 @@
   @media (max-width: 768px) {
     .hero-content {
       grid-template-columns: 1fr;
-      gap: 40px;
-      padding: 60px 20px 80px;
+      gap: 32px;
+      padding: 24px 20px 60px;
     }
 
-    .hero-right { order: -1; }
+    .hero-right {
+      order: -1;
+      width: 100%;
+      overflow: hidden;
+    }
 
-    .photo-frame { max-width: 100%; }
+    .photo-frame {
+      max-width: 100%;
+      width: 100%;
+    }
 
-    .float-badge { right: 0; top: 10px; }
+    .float-badge {
+      right: 8px;
+      top: 8px;
+    }
+
+    .photo-tag {
+      white-space: normal;
+      width: calc(100% - 48px);
+    }
 
     .stats-inner { grid-template-columns: 1fr; gap: 24px; }
-
     .puzzles { grid-template-columns: 1fr; }
-
     .section { padding: 60px 20px; }
-
     .solution-wrap { padding: 60px 20px; }
-
     .story-wrap { padding: 60px 20px; }
-
     .final-cta { padding: 60px 20px; }
-
-    .cta-big { padding: 18px 32px; font-size: 15px; }
+    .cta-btn { width: 100%; justify-content: center; }
+    .cta-big { padding: 18px 28px; font-size: 14px; width: 100%; box-sizing: border-box; }
+    .who-list { grid-template-columns: 1fr 1fr; }
   }
 </style>
 </head>
@@ -867,7 +875,8 @@
 <!-- FOOTER -->
 <footer>
   <p>© 2025 Андрей · Happy People Network<br>
-  Сайт носит информационный характер. Результаты индивидуальны и зависят от личных усилий.</p>
+  Сайт носит информационный характер. Результаты индивидуальны и зависят от личных усилий.<br>
+  <a href="privacy.html" style="color: var(--gold); text-decoration: none; border-bottom: 1px solid rgba(201,168,76,0.3);">Политика конфиденциальности</a></p>
 </footer>
 
 </body>
