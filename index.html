@@ -112,21 +112,25 @@ body {
 .hero-sub strong { color: var(--text); font-weight: 600; }
 
 .btn-main {
-  display: flex; align-items: center; justify-content: center;
-  gap: 8px; width: 100%;
+  display: block;
+  width: 100%;
   background: linear-gradient(135deg, var(--gold), #A87830);
   color: #0D1117;
   font-family: var(--font);
-  font-size: 16px; font-weight: 800;
-  padding: 18px 20px;
+  font-size: 16px;
+  font-weight: 800;
+  line-height: 1.3;
+  padding: 18px 16px;
   border-radius: 50px;
-  text-decoration: none;
   text-align: center;
   box-shadow: 0 8px 32px rgba(201,168,76,0.4);
   transition: opacity .2s;
   cursor: pointer;
-  user-select: none;
-  -webkit-user-select: none;
+  border: none;
+  outline: none;
+  -webkit-appearance: none;
+  appearance: none;
+  box-sizing: border-box;
 }
 .btn-main:active { opacity: .85; }
 
@@ -284,9 +288,9 @@ footer a { color: var(--gold); text-decoration: none; }
     Пошаговая инструкция от Андрея — предпринимателя, объехавшего <strong>50 стран</strong>, живущего на Бали и построившего систему, которая работает <strong>без офиса, склада и списка знакомых</strong>.
   </p>
 
-  <div class="btn-main" onclick="window.open('https://t.me/andrey_mudrybot?start=lp','_blank')">
+  <button class="btn-main" onclick="window.open('https://t.me/andrey_mudrybot?start=lp','_blank')">
     Получить инструкцию бесплатно →
-  </div>
+  </button>
   <p class="hero-note">🔒 Без спама. Только полезный контент.</p>
 </section>
 
@@ -429,9 +433,9 @@ footer a { color: var(--gold); text-decoration: none; }
   <span class="tag" style="display:block;text-align:center;">Старт бесплатно</span>
   <h2 class="h2" style="text-align:center;">Получи инструкцию<br>прямо сейчас</h2>
   <p class="sub" style="text-align:center;">Нажми кнопку — и через 30 секунд у тебя будет пошаговый план.</p>
-  <div class="btn-main" onclick="window.open('https://t.me/andrey_mudrybot?start=lp','_blank')">
-    Получить бесплатную инструкцию →
-  </div>
+  <button class="btn-main" onclick="window.open('https://t.me/andrey_mudrybot?start=lp','_blank')">
+    Получить инструкцию бесплатно →
+  </button>
   <p class="hero-note" style="margin-top:14px;">🔒 Без регистрации. Переходишь в чат — получаешь материал.</p>
 </section>
 
