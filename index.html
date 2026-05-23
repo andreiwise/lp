@@ -115,7 +115,7 @@ body {
   display: flex; align-items: center; justify-content: center;
   gap: 8px; width: 100%;
   background: linear-gradient(135deg, var(--gold), #A87830);
-  color: #0D1117 !important;
+  color: #0D1117;
   font-family: var(--font);
   font-size: 16px; font-weight: 800;
   padding: 18px 20px;
@@ -124,7 +124,9 @@ body {
   text-align: center;
   box-shadow: 0 8px 32px rgba(201,168,76,0.4);
   transition: opacity .2s;
-  white-space: nowrap;
+  cursor: pointer;
+  user-select: none;
+  -webkit-user-select: none;
 }
 .btn-main:active { opacity: .85; }
 
@@ -282,9 +284,9 @@ footer a { color: var(--gold); text-decoration: none; }
     Пошаговая инструкция от Андрея — предпринимателя, объехавшего <strong>50 стран</strong>, живущего на Бали и построившего систему, которая работает <strong>без офиса, склада и списка знакомых</strong>.
   </p>
 
-  <a href="https://t.me/andrey_mudrybot?start=lp" class="btn-main" target="_blank" style="color:#0D1117 !important;">
+  <div class="btn-main" onclick="window.open('https://t.me/andrey_mudrybot?start=lp','_blank')">
     Получить инструкцию бесплатно →
-  </a>
+  </div>
   <p class="hero-note">🔒 Без спама. Только полезный контент.</p>
 </section>
 
@@ -427,9 +429,9 @@ footer a { color: var(--gold); text-decoration: none; }
   <span class="tag" style="display:block;text-align:center;">Старт бесплатно</span>
   <h2 class="h2" style="text-align:center;">Получи инструкцию<br>прямо сейчас</h2>
   <p class="sub" style="text-align:center;">Нажми кнопку — и через 30 секунд у тебя будет пошаговый план.</p>
-  <a href="https://t.me/andrey_mudrybot?start=lp" class="btn-main" target="_blank" style="color:#0D1117 !important;">
-    Получить инструкцию бесплатно →
-  </a>
+  <div class="btn-main" onclick="window.open('https://t.me/andrey_mudrybot?start=lp','_blank')">
+    Получить бесплатную инструкцию →
+  </div>
   <p class="hero-note" style="margin-top:14px;">🔒 Без регистрации. Переходишь в чат — получаешь материал.</p>
 </section>
 
